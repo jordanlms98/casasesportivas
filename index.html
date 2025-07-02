@@ -4,26 +4,129 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aposta Segura - Clone</title>
-  <script>
-    function toggleContent(id) {
-      const el = document.getElementById(id);
-      el.classList.toggle('hidden');
-    }
-  </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <style>
     body {
       background-color: #000000;
       font-family: 'Poppins', sans-serif;
     }
+
     .gradient-bg {
       background-image: linear-gradient(to right, #FFD700, #FFD700);
     }
+
     .text-gold {
       color: #FFD700;
     }
+
     .bg-gold {
       background-color: #FFD700;
+    }
+
+    /* Novo estilo personalizado para o card da BETNACIONAL */
+    .betnacional-info {
+      background-color: #1E293B;
+      color: #E0E0E0;
+      padding: 20px;
+      border-radius: 8px;
+      display: none;
+      max-width: 700px;
+      margin: 10px auto 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .betnacional-info h4 {
+      color: #FFD700;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .betnacional-info p {
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .betnacional-info strong {
+      color: #FFD700;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .betnacional-info ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+
+    .betnacional-info ul li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 20px;
+      color: #D1FAE5;
+    }
+
+    .betnacional-info ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #34D399;
+    }
+
+    .betnacional-info .social-links {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .betnacional-info .social-links a {
+      color: #E0E0E0;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+    }
+
+    .betnacional-info .social-links a:hover {
+      color: #FFD700;
+    }
+
+    .betnacional-info .social-links svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .betnacional-info .testimonial {
+      border-left: 3px solid #2563EB;
+      padding-left: 12px;
+      font-style: italic;
+      color: #A7F3D0;
+      margin-bottom: 20px;
+    }
+
+    .betnacional-info .testimonial cite {
+      display: block;
+      margin-top: 8px;
+      font-style: normal;
+      color: #22C55E;
+      font-weight: 600;
+    }
+
+    .betnacional-info .btn-visit {
+      display: inline-block;
+      background-color: #F97316;
+      color: white;
+      font-weight: 700;
+      text-align: center;
+      padding: 12px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .betnacional-info .btn-visit:hover {
+      background-color: #EA580C;
     }
   </style>
 </head>
@@ -54,59 +157,81 @@
     <section class="py-16">
       <div class="container mx-auto space-y-8">
 
-        <!-- Card BETNACIONAL -->
+        <!-- Card BETNACIONAL Atualizado -->
         <div class="bg-black/80 rounded-lg border border-white/10 hover:bg-black/90 transition-all shadow hover:shadow-yellow-500/20 p-6">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-4">
               <img src="/lovable-uploads/89fe3c9c-d8ef-49f9-a7fe-c931fad9567a.png" class="w-16 h-16 object-contain rounded-lg bg-white/5 p-2" alt="BETNACIONAL logo">
               <div>
                 <div class="flex items-center gap-3 mb-2">
-                  <h3 onclick="toggleContent('betnacional-info')" class="text-gold font-semibold text-xl cursor-pointer">BETNACIONAL</h3>
+                  <h3 class="text-gold font-semibold text-xl">BETNACIONAL</h3>
                   <span class="bg-gold text-black px-3 py-1 rounded-full text-xs font-semibold">Licenciada</span>
                 </div>
                 <p class="text-white">A casa dos brasileiros, com o saque mais rápido do mercado via PIX.</p>
-                <div id="betnacional-info" class="hidden mt-4 text-white text-sm space-y-2 text-left">
-                  <p><strong>Descrição</strong><br>Focada no público brasileiro, a Betnacional é conhecida por sua plataforma simples, segura e, principalmente, pela velocidade incomparável de seus saques via PIX.</p>
-                  <p><strong>Principais Vantagens</strong></p>
-                  <ul class="list-disc list-inside">
-                    <li>Saques via PIX em minutos</li>
-                    <li>Plataforma 100% brasileira</li>
-                    <li>Suporte rápido em português</li>
-                    <li>Ótima cobertura do futebol nacional</li>
-                  </ul>
-                  <p><strong>Redes Sociais</strong><br>
-                    <a href="https://www.instagram.com/betnacional/" class="text-gold underline" target="_blank">Instagram</a><br>
-                    <a href="https://x.com/betnacional" class="text-gold underline" target="_blank">Twitter/X</a>
-                  </p>
-                  <p><strong>Prova Social</strong><br>
-                    "Respondem 98,4% das reclamações e resolvem 92,9% delas, com nota média de 8,06/10."<br>
-                    — Reclame Aqui
-                  </p>
-                  <a href="https://betnacional.bet.br/" target="_blank" class="inline-block mt-2 px-4 py-2 bg-gold text-black font-bold rounded-full hover:bg-yellow-400 transition">Visitar BETNACIONAL</a>
-                </div>
               </div>
             </div>
             <div class="flex items-center gap-4">
               <div class="gradient-bg px-4 py-2 rounded-full">
                 <span class="text-black font-bold">9.7/10</span>
               </div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white toggle-betnacional cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M6 9l6 6 6-6"></path>
               </svg>
             </div>
           </div>
+
+          <div class="betnacional-info" id="betnacionalInfo">
+            <h4>Descrição</h4>
+            <p>Focada no público brasileiro, a Betnacional é conhecida por sua plataforma simples, segura e, principalmente, pela velocidade incomparável de seus saques via PIX.</p>
+
+            <strong>Principais Vantagens</strong>
+            <ul>
+              <li>Saques via PIX em minutos</li>
+              <li>Plataforma 100% brasileira</li>
+              <li>Suporte rápido em português</li>
+              <li>Ótima cobertura do futebol nacional</li>
+            </ul>
+
+            <div class="social-links">
+              <a href="https://www.instagram.com/betnacional/" target="_blank" rel="noopener noreferrer">
+                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5z"></path><circle cx="12" cy="12" r="3.25"/></svg> Instagram
+              </a>
+              <a href="https://x.com/betnacional" target="_blank" rel="noopener noreferrer">
+                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M2.46 21.67c2.72-1.24 4.4-3.57 5.17-6.17a5.4 5.4 0 01-2.37-.96c.02-.04.02-.09.02-.14 0-2.1 1.5-3.8 3.38-4.18a5.55 5.55 0 01-1.5-.2 5.49 5.49 0 004.08-3.84 10.68 10.68 0 007.76 3.94c-.02-.13-.02-.27-.02-.41 0-3.86-3.11-7-7-7-.12 0-.25.01-.37.02a4.94 4.94 0 003.44-1.2 4.92 4.92 0 01-1.57-.44 4.92 4.92 0 01-2.68-3.22 4.92 4.92 0 002.23.62 4.92 4.92 0 01-1.5-.4 4.92 4.92 0 01-3.95-4.83 13.97 13.97 0 0010.13 5.15 5.57 5.57 0 01-2.18 4.12 10.76 10.76 0 003.07-.87 5.6 5.6 0 01-2.44 2.58z"/></svg> Twitter/X
+              </a>
+            </div>
+
+            <div class="testimonial">
+              "Respondem 98,4% das reclamações e resolvem 92,9% delas, com nota média de 8,06/10."
+              <cite>— Reclame Aqui</cite>
+            </div>
+
+            <a href="https://betnacional.bet.br/" target="_blank" rel="noopener noreferrer" class="btn-visit">Visitar BETNACIONAL</a>
+          </div>
         </div>
 
-        <!-- Outros cards continuam abaixo... -->
+        <!-- Você pode adicionar outros cards aqui... -->
 
       </div>
     </section>
-
   </main>
 
   <footer class="py-8 px-6 border-t border-white/10 text-center text-white">
     <p>© 2024 Aposta Segura. Todos os direitos reservados.</p>
     <p>Apostas são destinadas a maiores de 18 anos. Jogue com responsabilidade.</p>
   </footer>
+
+  <script>
+    document.querySelectorAll('.toggle-betnacional').forEach(el => {
+      el.addEventListener('click', () => {
+        const content = document.getElementById('betnacionalInfo');
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+        } else {
+          content.style.display = 'block';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
