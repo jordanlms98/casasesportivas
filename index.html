@@ -1,266 +1,97 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Casas Esportivas - As Melhores Plataformas Com A Maior Segurança</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-<style>
-  /* Reset básico */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #000;
-    color: #fff;
-    line-height: 1.6;
-  }
-  a {
-    text-decoration: none;
-    color: #D4AF37;
-    transition: color 0.3s ease;
-  }
-  a:hover {
-    color: #fff;
-  }
-  header {
-    background-color: #111;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 1rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    border-bottom: 2px solid #D4AF37;
-  }
-  header .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    color: #D4AF37;
-    font-weight: 700;
-  }
-  nav {
-    display: flex;
-    gap: 2rem;
-  }
-  nav a {
-    font-weight: 600;
-    font-size: 1rem;
-  }
-  nav a.btn {
-    background-color: #D4AF37;
-    color: #000;
-    padding: 0.5rem 1.2rem;
-    border-radius: 25px;
-    font-weight: 700;
-  }
-  nav a.btn:hover {
-    background-color: #b08f2f;
-    color: #fff;
-  }
-  main {
-    padding-top: 80px; /* para compensar header fixo */
-  }
-  .hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.imgur.com/IV5rr6Z.png') center/cover no-repeat;
-    color: #D4AF37;
-    text-align: center;
-    padding: 6rem 2rem;
-  }
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 5px #000;
-  }
-  .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    font-weight: 500;
-    text-shadow: 1px 1px 4px #000;
-  }
-  .hero a.btn {
-    background-color: #D4AF37;
-    color: #000;
-    padding: 1rem 3rem;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.2rem;
-    box-shadow: 0 5px 15px rgba(212,175,55,0.5);
-    transition: background-color 0.3s ease;
-  }
-  .hero a.btn:hover {
-    background-color: #b08f2f;
-    color: #fff;
-    box-shadow: 0 8px 20px rgba(176,143,47,0.8);
-  }
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
-    gap: 2rem;
-    padding: 4rem 3rem;
-    background-color: #111;
-  }
-  .card {
-    background: #1a1a1a;
-    border: 1px solid #D4AF37;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 0 15px rgba(212,175,55,0.7);
-    transition: transform 0.3s ease;
-  }
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(212,175,55,0.9);
-  }
-  .card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-bottom: 3px solid #D4AF37;
-  }
-  .card-content {
-    padding: 1.5rem;
-  }
-  .card-content h3 {
-    font-family: 'Playfair Display', serif;
-    color: #D4AF37;
-    margin-bottom: 0.5rem;
-  }
-  .card-content p {
-    font-size: 1rem;
-    color: #ddd;
-    margin-bottom: 1rem;
-  }
-  .card-content a.btn {
-    background-color: #D4AF37;
-    color: #000;
-    padding: 0.6rem 1.6rem;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 1rem;
-    box-shadow: 0 4px 12px rgba(212,175,55,0.4);
-    display: inline-block;
-  }
-  .card-content a.btn:hover {
-    background-color: #b08f2f;
-    color: #fff;
-    box-shadow: 0 6px 18px rgba(176,143,47,0.7);
-  }
-  footer {
-    background-color: #111;
-    padding: 2rem 3rem;
-    text-align: center;
-    color: #888;
-    font-size: 0.9rem;
-    border-top: 2px solid #D4AF37;
-  }
-  footer a {
-    color: #D4AF37;
-    margin: 0 0.6rem;
-    font-weight: 600;
-  }
-  footer a:hover {
-    color: #fff;
-  }
-  /* Responsividade */
-  @media(max-width: 600px) {
-    header {
-      flex-direction: column;
-      gap: 1rem;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aposta Segura - Clone</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    body {
+      background-color: #111827;
+      font-family: 'Poppins', sans-serif;
     }
-    nav {
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
+    .gradient-bg {
+      background-image: linear-gradient(to right, #4F46E5, #7C3AED);
     }
-    .hero h1 {
-      font-size: 2.4rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-    }
-    .cards {
-      padding: 2rem 1rem;
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
+  </style>
 </head>
 <body>
-<header>
-  <div class="logo">
-    <img src="https://i.imgur.com/CvUvgeY.png" alt="Logo Casas Esportivas" style="height: 90px;" />
-  </div>
-  <nav>
-    <a href="#">Início</a>
-   
-  </nav>
-</header>
-
-<main>
-  <section class="hero">
-    <h1>CASAS ESPORTIVAS</h1>
-    <p>Economize tempo e aposte com mais confiança — conheça as melhores plataformas em um só clique.</p>
-    <a href="#" class="btn">Confira Agora</a>
-  </section>
-
- <section class="cards">
-    <article class="card">
-      <img src="https://i.imgur.com/Y5f1UQX.png" />
-      <div class="card-content">
-        <h3>SUPERBET</h3>
-        <p>Viva uma SUPER experiência de apostas! Junte-se a milhões de jogadores, acompanhe jogos ao vivo e aproveite bônus generosos, super odds e saques instantâneos. #SejaSuper</p>
-        <a href="https://oddspartners.xyz/1738-3756" class="btn" target="_blank" rel="noopener noreferrer">Acesse Agora</a>
-
-      </div>
-    </article>
-    <article class="card">
-      <img src="https://i.imgur.com/l4rMiwf.jpeg" alt="Tutorial de Apostas" />
-      <div class="card-content">
-        <h3>NOVIBET</h3>
-        <p>Jogue na nova era com a Novibet — tecnologia avançada, odds turbinadas e emoção garantida!</p>
-        <a href="https://oddspartners.xyz/22-2875" class="btn" target="_blank" rel="noopener noreferrer">Acesse Agora</a>
-        
-      </div>
-    </article>
-    <article class="card">
-      <img src="http://i.imgur.com/KBVhxpz.jpeg" alt="Tutorial de Apostas" />
-      <div class="card-content">
-        <h3>MARJO SPORTS</h3>
-        <p>Quer uma experiência de apostas completa e segura? Conheça a MarjoSports: variedade de esportes, promoções exclusivas e ambiente confiável. Jogue agora!</p>
-        <a href="https://go.affiliapass.com?id=6830f9a03e9f71001562a712" class="btn" target="_blank" rel="noopener noreferrer">Acesse Agora</a>
-
+  <header class="fixed top-0 left-0 right-0 z-50 bg-gray-800/90 backdrop-blur border-b border-white/10">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="relative">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+          </svg>
         </div>
-    </article>
-
-    <article class="card">
-      <img src="https://i.imgur.com/svMQzje.jpeg" alt="Tutorial de Apostas" />
-      <div class="card-content">
-        <h3>SPINWIZ</h3>
-        <p>Mais de 4 000 jogos, saque rápido + 50 giros grátis — só na Spinwiz!</p>
-        <a href="https://go.affiliapass.com?id=68346ec43e9f71001562db99" class="btn" target="_blank" rel="noopener noreferrer">Acesse Agora</a>
-        
+        <span class="text-white font-semibold text-xl">Aposta Segura</span>
       </div>
-    </article>
-  </section>
-</main>
+      <nav class="flex items-center gap-8">
+        <a class="text-indigo-500 font-semibold border-b-2 border-indigo-500 pb-1" href="/">Brasil</a>
+        <a class="text-gray-400 hover:text-white font-semibold" href="/latam">LATAM</a>
+      </nav>
+    </div>
+  </header>
 
-<footer>
-  <p>&copy; 2025 CasasEsportivas. Todos os direitos reservados.</p>
-  <p>
-    <a href="#">Sobre</a> |
-    <a href="#">FAQ</a> |
-    <a href="#">Política de Privacidade</a> |
-    <a href="#">Contato</a>
-  </p>
-</footer>
+  <main class="pt-32 pb-16 px-6">
+    <section class="text-center">
+      <h1 class="text-5xl font-bold mb-6 bg-clip-text text-transparent gradient-bg">A Casa de Aposta Certa para Você</h1>
+      <p class="text-gray-400 text-xl max-w-3xl mx-auto">Explore nossas análises detalhadas, escolha com confiança e encontre informações sobre como jogar de forma responsável.</p>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto space-y-8">
+        <!-- Exemplo de card -->
+        <div class="bg-gray-800/80 rounded-lg border border-white/10 hover:bg-gray-800/90 transition-all shadow hover:shadow-indigo-500/20 p-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <img src="https://via.placeholder.com/64" class="w-16 h-16 object-contain rounded-lg bg-white/5 p-2" alt="Logo">
+              <div>
+                <div class="flex items-center gap-3 mb-2">
+                  <h3 class="text-white font-semibold text-xl">NOME DA CASA</h3>
+                  <span class="bg-green-400 text-black px-3 py-1 rounded-full text-xs font-semibold">Licenciada</span>
+                </div>
+                <p class="text-gray-400">Descrição da casa de aposta e benefícios.</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="gradient-bg px-4 py-2 rounded-full">
+                <span class="text-white font-bold">9.7/10</span>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Fim do card -->
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold text-white mb-12">Informações Importantes para um Jogo Seguro</h2>
+        <div class="max-w-4xl mx-auto space-y-4">
+          <div class="bg-gray-800/80 rounded-lg border border-white/10 p-6 hover:bg-gray-800/90 transition">
+            <div class="flex items-center justify-between">
+              <h3 class="text-white font-semibold text-lg">O que é Jogo Responsável?</h3>
+              <span class="text-gray-400">+</span>
+            </div>
+          </div>
+          <div class="bg-gray-800/80 rounded-lg border border-white/10 p-6 hover:bg-gray-800/90 transition">
+            <div class="flex items-center justify-between">
+              <h3 class="text-white font-semibold text-lg">Sinais de alerta e possíveis problemas</h3>
+              <span class="text-gray-400">+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-8 px-6 border-t border-white/10 text-center text-gray-400">
+    <p>© 2024 Aposta Segura. Todos os direitos reservados.</p>
+    <p>Apostas são destinadas a maiores de 18 anos. Jogue com responsabilidade.</p>
+  </footer>
 </body>
 </html>
