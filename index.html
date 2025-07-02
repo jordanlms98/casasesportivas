@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aposta Segura - Clone</title>
+  <script>
+    function toggleContent(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+  </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <style>
     body {
@@ -77,17 +83,38 @@
     <section class="py-16">
       <div class="container mx-auto text-center">
         <h2 class="text-4xl font-bold text-gold mb-12">Informações Importantes para um Jogo Seguro</h2>
-        <div class="max-w-4xl mx-auto space-y-4">
-          <div class="bg-black/80 rounded-lg border border-white/10 p-6 hover:bg-black/90 transition">
+        <div class="max-w-4xl mx-auto space-y-4 text-left">
+          <div class="bg-black/80 rounded-lg border border-white/10 p-6 hover:bg-black/90 transition cursor-pointer" onclick="toggleContent('jogo-responsavel')">
             <div class="flex items-center justify-between">
               <h3 class="text-white font-semibold text-lg">O que é Jogo Responsável?</h3>
               <span class="text-white">+</span>
             </div>
+            <div id="jogo-responsavel" class="hidden mt-4 text-white text-sm space-y-2">
+              <p><strong>Jogo Responsável</strong> é um conjunto de práticas para garantir que as apostas sejam uma forma de entretenimento segura e controlada. Envolve ter consciência sobre os riscos e adotar comportamentos para manter a atividade divertida e saudável.</p>
+              <ul class="list-disc list-inside">
+                <li><strong>Defina Limites:</strong> Antes de começar, estabeleça limites claros de tempo e dinheiro. Nunca ultrapasse esses limites.</li>
+                <li><strong>Encare como Lazer:</strong> Apostar é entretenimento, não uma fonte de renda ou solução para problemas financeiros.</li>
+                <li><strong>Não persiga perdas:</strong> Tentar recuperar dinheiro perdido com mais apostas é um comportamento de risco.</li>
+                <li><strong>Saiba quando parar:</strong> Se não está mais se divertindo ou o jogo afeta seu humor e suas responsabilidades, é hora de fazer uma pausa.</li>
+              </ul>
+            </div>
           </div>
-          <div class="bg-black/80 rounded-lg border border-white/10 p-6 hover:bg-black/90 transition">
+
+          <div class="bg-black/80 rounded-lg border border-white/10 p-6 hover:bg-black/90 transition cursor-pointer" onclick="toggleContent('sinais-alerta')">
             <div class="flex items-center justify-between">
               <h3 class="text-white font-semibold text-lg">Sinais de alerta e possíveis problemas</h3>
               <span class="text-white">+</span>
+            </div>
+            <div id="sinais-alerta" class="hidden mt-4 text-white text-sm space-y-2">
+              <p>É crucial estar atento a sinais de que o jogo pode estar se tornando um problema. Fique atento se você ou alguém que você conhece apresentar os seguintes comportamentos:</p>
+              <ul class="list-disc list-inside">
+                <li><strong>Problemas Financeiros:</strong> Gastar mais do que pode ou pedir dinheiro emprestado para jogar.</li>
+                <li><strong>Isolamento Social:</strong> Afastar-se de amigos e familiares para passar mais tempo jogando.</li>
+                <li><strong>Impacto Emocional:</strong> Sentir-se ansioso, irritado ou deprimido por causa do jogo.</li>
+                <li><strong>Negligência:</strong> Deixar de cumprir com responsabilidades no trabalho, estudos ou em casa.</li>
+                <li><strong>Mentiras:</strong> Esconder a frequência ou a quantidade de dinheiro gasto com apostas.</li>
+              </ul>
+              <p>Se você se identifica com algum desses pontos, considere procurar ajuda em organizações especializadas.</p>
             </div>
           </div>
         </div>
