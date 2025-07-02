@@ -7,28 +7,34 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <style>
     body {
-      background-color: #111827;
+      background-color: #000000;
       font-family: 'Poppins', sans-serif;
     }
     .gradient-bg {
-      background-image: linear-gradient(to right, #4F46E5, #7C3AED);
+      background-image: linear-gradient(to right, #FFD700, #FFD700);
+    }
+    .text-gold {
+      color: #FFD700;
+    }
+    .bg-gold {
+      background-color: #FFD700;
     }
   </style>
 </head>
 <body>
-  <header class="fixed top-0 left-0 right-0 z-50 bg-gray-800/90 backdrop-blur border-b border-white/10">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur border-b border-white/10">
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="relative">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gold" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
           </svg>
         </div>
         <span class="text-white font-semibold text-xl">Aposta Segura</span>
       </div>
       <nav class="flex items-center gap-8">
-        <a class="text-indigo-500 font-semibold border-b-2 border-indigo-500 pb-1" href="/">Brasil</a>
-        <a class="text-gray-400 hover:text-white font-semibold" href="/latam">LATAM</a>
+        <a class="text-gold font-semibold border-b-2 border-gold pb-1" href="/">Brasil</a>
+        <a class="text-white hover:text-gold font-semibold" href="/latam">LATAM</a>
       </nav>
     </div>
   </header>
@@ -36,29 +42,29 @@
   <main class="pt-32 pb-16 px-6">
     <section class="text-center">
       <h1 class="text-5xl font-bold mb-6 bg-clip-text text-transparent gradient-bg">A Casa de Aposta Certa para Você</h1>
-      <p class="text-gray-400 text-xl max-w-3xl mx-auto">Explore nossas análises detalhadas, escolha com confiança e encontre informações sobre como jogar de forma responsável.</p>
+      <p class="text-white text-xl max-w-3xl mx-auto">Explore nossas análises detalhadas, escolha com confiança e encontre informações sobre como jogar de forma responsável.</p>
     </section>
 
     <section class="py-16">
       <div class="container mx-auto space-y-8">
         <!-- Exemplo de card -->
-        <div class="bg-gray-800/80 rounded-lg border border-white/10 hover:bg-gray-800/90 transition-all shadow hover:shadow-indigo-500/20 p-6">
+        <div class="bg-black/80 rounded-lg border border-white/10 hover:bg-black/90 transition-all shadow hover:shadow-yellow-500/20 p-6">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-4">
               <img src="https://via.placeholder.com/64" class="w-16 h-16 object-contain rounded-lg bg-white/5 p-2" alt="Logo">
               <div>
                 <div class="flex items-center gap-3 mb-2">
-                  <h3 class="text-white font-semibold text-xl">NOME DA CASA</h3>
-                  <span class="bg-green-400 text-black px-3 py-1 rounded-full text-xs font-semibold">Licenciada</span>
+                  <h3 class="text-gold font-semibold text-xl">NOME DA CASA</h3>
+                  <span class="bg-gold text-black px-3 py-1 rounded-full text-xs font-semibold">Licenciada</span>
                 </div>
-                <p class="text-gray-400">Descrição da casa de aposta e benefícios.</p>
+                <p class="text-white">Descrição da casa de aposta e benefícios.</p>
               </div>
             </div>
             <div class="flex items-center gap-4">
               <div class="gradient-bg px-4 py-2 rounded-full">
-                <span class="text-white font-bold">9.7/10</span>
+                <span class="text-black font-bold">9.7/10</span>
               </div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M6 9l6 6 6-6"></path>
               </svg>
             </div>
@@ -70,18 +76,18 @@
 
     <section class="py-16">
       <div class="container mx-auto text-center">
-        <h2 class="text-4xl font-bold text-white mb-12">Informações Importantes para um Jogo Seguro</h2>
+        <h2 class="text-4xl font-bold text-gold mb-12">Informações Importantes para um Jogo Seguro</h2>
         <div class="max-w-4xl mx-auto space-y-4">
-          <div class="bg-gray-800/80 rounded-lg border border-white/10 p-6 hover:bg-gray-800/90 transition">
+          <div class="bg-black/80 rounded-lg border border-white/10 p-6 hover:bg-black/90 transition">
             <div class="flex items-center justify-between">
               <h3 class="text-white font-semibold text-lg">O que é Jogo Responsável?</h3>
-              <span class="text-gray-400">+</span>
+              <span class="text-white">+</span>
             </div>
           </div>
-          <div class="bg-gray-800/80 rounded-lg border border-white/10 p-6 hover:bg-gray-800/90 transition">
+          <div class="bg-black/80 rounded-lg border border-white/10 p-6 hover:bg-black/90 transition">
             <div class="flex items-center justify-between">
               <h3 class="text-white font-semibold text-lg">Sinais de alerta e possíveis problemas</h3>
-              <span class="text-gray-400">+</span>
+              <span class="text-white">+</span>
             </div>
           </div>
         </div>
@@ -89,7 +95,7 @@
     </section>
   </main>
 
-  <footer class="py-8 px-6 border-t border-white/10 text-center text-gray-400">
+  <footer class="py-8 px-6 border-t border-white/10 text-center text-white">
     <p>© 2024 Aposta Segura. Todos os direitos reservados.</p>
     <p>Apostas são destinadas a maiores de 18 anos. Jogue com responsabilidade.</p>
   </footer>
